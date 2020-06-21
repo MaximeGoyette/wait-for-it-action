@@ -12,7 +12,7 @@ jobs:
     - name: Wait for PostgreSQL db
       uses: MaximeGoyette/wait-for-it-action@master
       with:
-        host: localhost
+        host: 172.17.0.1
         port: 5432
 ```
 
