@@ -1,0 +1,19 @@
+name: 'Wait for it'
+description: 'Runs the infamous wait-for-it.sh script (https://github.com/vishnubob/wait-for-it)'
+branding:
+  icon: 'clock'
+  color: 'purple'
+inputs:
+  host:
+    description: 'Host or IP under test'
+    required: true
+  port:
+    description: 'TCP port under test'
+    required: true
+  timeout:
+    description: 'Timeout in seconds, zero for no timeout'
+    required: false
+    default: '15'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
